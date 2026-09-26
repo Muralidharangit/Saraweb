@@ -69,29 +69,75 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- Custom Luxury Stylesheet -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
+    <!-- ===================== LUXURY TOP SMALL HEADER ===================== -->
+    <aside class="luxury-top-bar" aria-label="Store Announcement and Concierge Bar">
+        <div class="container-fluid px-lg-5 px-3">
+            <div class="d-flex align-items-center justify-content-between">
+
+                <!-- Left: Boutique Helpline & WhatsApp Concierge -->
+                <div class="top-bar-left d-none d-md-flex align-items-center gap-3">
+                    <a href="tel:+919876543210" title="Direct Boutique Concierge Helpline">
+                        <i class="bi bi-telephone-fill text-gold me-1"></i>
+                        <span>+91 98765 43210</span>
+                    </a>
+                    <span class="top-bar-divider d-none d-xl-inline">|</span>
+                    <a href="https://wa.me/919876543210" target="_blank" class="d-none d-xl-inline-flex" title="Chat on WhatsApp" rel="noopener">
+                        <i class="bi bi-whatsapp text-gold me-1"></i>
+                        <span>WhatsApp Concierge</span>
+                    </a>
+                </div>
+
+                <!-- Center: Luxury Announcement Highlight -->
+                <div class="top-bar-center text-center flex-grow-1 mx-2">
+                    <div class="top-bar-announcement">
+                        <span class="gold-sparkle me-1"><i class="bi bi-stars"></i></span>
+                        <span class="announcement-highlight">Festive Edit 2026:</span>
+                        <span class="announcement-text d-none d-sm-inline">Complimentary Insured </span>
+                       
+                    </div>
+                </div>
+
+                <!-- Right: Silk Mark Certified, Flagship Store & Currency -->
+                <div class="top-bar-right d-none d-md-flex align-items-center gap-3 justify-content-end">
+                    <span class="top-bar-badge d-none d-lg-inline-flex" title="100% Certified Pure Silk">
+                        <i class="bi bi-patch-check-fill text-gold me-1"></i>
+                        <span>Silk Mark Certified</span>
+                    </span>
+                    <span class="top-bar-divider d-none d-lg-inline">|</span>
+                    <span class="top-bar-location d-none d-xl-inline-flex" title="Our Flagship Store">
+                        <i class="bi bi-geo-alt-fill text-gold me-1"></i>
+                        <span>Jubilee Hills, Hyderabad</span>
+                    </span>
+                  
+                    
+                </div>
+
+            </div>
+        </div>
+    </aside>
 
     <header class="luxury-header">
         <div class="container-fluid px-lg-5 px-3">
             <div class="d-flex align-items-center justify-content-between">
 
                 <!-- BRAND / LOGO -->
-                <a href="#home" class="brand-container" aria-label="Sara's Boutique Home">
+                <a href="index.html" class="brand-container" aria-label="Sara's Boutique Home">
                     <img src="img/logo1.png" alt="Sara's Boutique - Fashion · Elegance · You" class="brand-logo-img">
                 </a>
 
                 <nav class="d-none d-lg-block">
                     <ul class="nav-luxury-links">
-                        <li><a href="#home" class="nav-luxury-link active" onclick="setActive(this)">Home</a></li>
-                        <li><a href="#shop" class="nav-luxury-link" onclick="setActive(this)">Shop</a></li>
-                        <li><a href="#collections" class="nav-luxury-link" onclick="setActive(this)">Collections</a></li>
-                        <li><a href="#newarrivals" class="nav-luxury-link" onclick="setActive(this)">New Arrivals</a></li>
-                        <li><a href="#bestsellers" class="nav-luxury-link" onclick="setActive(this)">Best Sellers</a></li>
-                        <li><a href="#about" class="nav-luxury-link" onclick="setActive(this)">About Us</a></li>
-                        <li><a href="#contact" class="nav-luxury-link" onclick="setActive(this)">Contact</a></li>
+                        <li><a href="index.html" class="nav-luxury-link active">Home</a></li>
+                        <li><a href="collection.html" class="nav-luxury-link">Collections</a></li>
+                        <li><a href="#newarrivals" class="nav-luxury-link">New Arrivals</a></li>
+                        <li><a href="#bestsellers" class="nav-luxury-link">Best Sellers</a></li>
+                        <li><a href="about.html" class="nav-luxury-link">About Us</a></li>
+                        <li><a href="contact.html" class="nav-luxury-link">Contact</a></li>
                     </ul>
                 </nav>
 
@@ -133,13 +179,10 @@
         <div class="offcanvas-body d-flex flex-column justify-content-between pt-4">
             <ul class="nav flex-column gap-3">
                 <li class="nav-item">
-                    <a class="nav-luxury-link active fs-5" href="#home" data-bs-dismiss="offcanvas">Home</a>
+                    <a class="nav-luxury-link active fs-5" href="index.html" data-bs-dismiss="offcanvas">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-luxury-link fs-5" href="#shop" data-bs-dismiss="offcanvas">Shop</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-luxury-link fs-5" href="#collections" data-bs-dismiss="offcanvas">Collections</a>
+                    <a class="nav-luxury-link fs-5" href="collection.html">Shop &amp; Collections</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-luxury-link fs-5" href="#newarrivals" data-bs-dismiss="offcanvas">New Arrivals</a>
@@ -148,10 +191,10 @@
                     <a class="nav-luxury-link fs-5" href="#bestsellers" data-bs-dismiss="offcanvas">Best Sellers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-luxury-link fs-5" href="#about" data-bs-dismiss="offcanvas">About Us</a>
+                    <a class="nav-luxury-link fs-5" href="about.html">About Us</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-luxury-link fs-5" href="#contact" data-bs-dismiss="offcanvas">Contact</a>
+                    <a class="nav-luxury-link fs-5" href="contact.html">Contact</a>
                 </li>
             </ul>
 
@@ -188,7 +231,7 @@
     </div>
     <!-- ===================== HERO BANNER SECTION ===================== -->
     <section class="hero-banner-section" id="home">
-        <div class="container-fluid px-lg-5 px-md-4 px-3 h-100">
+        <div class="container h-100">
             <div class="hero-banner-wrapper">
 
                 <!-- Left Content Column -->
@@ -215,11 +258,11 @@
 
                     <!-- Action Buttons -->
                     <div class="d-flex align-items-center gap-3 flex-wrap hero-btn-group">
-                        <a href="#shop" class="hero-shop-btn">
+                        <a href="collection.html" class="hero-shop-btn">
                             Shop Now
                             <i class="bi bi-arrow-right ms-2"></i>
                         </a>
-                        <a href="#collections" class="hero-outline-btn">
+                        <a href="collection.html" class="hero-outline-btn">
                             <i class="bi bi-gem me-2"></i> Explore Collection
                         </a>
                     </div>
@@ -329,7 +372,7 @@
 
         <!-- ===================== 1. SHOP BY CATEGORY (White Background) ===================== -->
         <section class="category-section section-bg-white luxury-section-pad" id="categories" aria-label="Shop by Category">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="category-row-wrapper d-flex flex-column flex-xl-row align-items-xl-center justify-content-between">
 
                     <!-- Category Title Column -->
@@ -345,7 +388,7 @@
                     <div class="category-scroll-container d-flex align-items-center">
 
                         <!-- 1. Churidar Sets (Active) -->
-                        <a href="javascript:void(0)" class="category-item active" data-category="churidar">
+                        <a href="collection.html" class="category-item active" data-category="churidar">
                             <div class="category-avatar-wrapper">
                                 <img src="img/card_purple.jpg" alt="Churidar Sets" class="category-avatar-img">
                             </div>
@@ -353,7 +396,7 @@
                         </a>
 
                         <!-- 2. Salwar Suits -->
-                        <a href="javascript:void(0)" class="category-item" data-category="salwar">
+                        <a href="collection.html" class="category-item" data-category="salwar">
                             <div class="category-avatar-wrapper">
                                 <img src="img/card_pink.jpg" alt="Salwar Suits" class="category-avatar-img">
                             </div>
@@ -361,7 +404,7 @@
                         </a>
 
                         <!-- 3. Anarkali -->
-                        <a href="javascript:void(0)" class="category-item" data-category="anarkali">
+                        <a href="collection.html" class="category-item" data-category="anarkali">
                             <div class="category-avatar-wrapper">
                                 <img src="img/card_green.jpg" alt="Anarkali" class="category-avatar-img">
                             </div>
@@ -369,7 +412,7 @@
                         </a>
 
                         <!-- 4. Kurtis -->
-                        <a href="javascript:void(0)" class="category-item" data-category="kurtis">
+                        <a href="collection.html" class="category-item" data-category="kurtis">
                             <div class="category-avatar-wrapper">
                                 <img src="img/card_mustard.jpg" alt="Kurtis" class="category-avatar-img">
                             </div>
@@ -377,7 +420,7 @@
                         </a>
 
                         <!-- 5. Lehenga Style -->
-                        <a href="javascript:void(0)" class="category-item" data-category="lehenga">
+                        <a href="collection.html" class="category-item" data-category="lehenga">
                             <div class="category-avatar-wrapper">
                                 <img src="img/card_teal.jpg" alt="Lehenga Style" class="category-avatar-img">
                             </div>
@@ -385,7 +428,7 @@
                         </a>
 
                         <!-- 6. Dupatta -->
-                        <a href="javascript:void(0)" class="category-item" data-category="dupatta">
+                        <a href="collection.html" class="category-item" data-category="dupatta">
                             <div class="category-avatar-wrapper">
                                 <img src="img/cat_dupatta.jpg" alt="Dupatta" class="category-avatar-img no-zoom">
                             </div>
@@ -393,7 +436,7 @@
                         </a>
 
                         <!-- 7. Bottoms -->
-                        <a href="javascript:void(0)" class="category-item" data-category="bottoms">
+                        <a href="collection.html" class="category-item" data-category="bottoms">
                             <div class="category-avatar-wrapper">
                                 <img src="img/cat_bottoms.jpg" alt="Bottoms" class="category-avatar-img no-zoom">
                             </div>
@@ -401,7 +444,7 @@
                         </a>
 
                         <!-- 8. Bridal Trousseau -->
-                        <a href="javascript:void(0)" class="category-item" data-category="bridal">
+                        <a href="collection.html" class="category-item" data-category="bridal">
                             <div class="category-avatar-wrapper">
                                 <img src="img/offbanner.png" alt="Bridal Trousseau" class="category-avatar-img">
                             </div>
@@ -409,7 +452,7 @@
                         </a>
 
                         <!-- 9. Palazzo Sets -->
-                        <a href="javascript:void(0)" class="category-item" data-category="palazzo">
+                        <a href="collection.html" class="category-item" data-category="palazzo">
                             <div class="category-avatar-wrapper">
                                 <img src="img/card_pink.jpg" alt="Palazzo Sets" class="category-avatar-img">
                             </div>
@@ -417,7 +460,7 @@
                         </a>
 
                         <!-- 10. Festive Silks -->
-                        <a href="javascript:void(0)" class="category-item" data-category="festive">
+                        <a href="collection.html" class="category-item" data-category="festive">
                             <div class="category-avatar-wrapper">
                                 <img src="img/card_mustard.jpg" alt="Festive Silks" class="category-avatar-img">
                             </div>
@@ -431,7 +474,7 @@
 
         <!-- ===================== 2. NEW ARRIVALS SWIPER (Ivory Background #fbf6f0) ===================== -->
         <section class="trending-section section-bg-ivory luxury-section-pad" id="newarrivals" aria-label="New Arrivals - Trending Churidar Sets">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="row align-items-center">
 
                     <!-- Left Intro Column (Sticky / Heading / CTA) -->
@@ -442,7 +485,7 @@
                             <p class="trending-subtitle mb-4">
                                 Handcrafted pure silk ensembles with intricate royal embroidery.
                             </p>
-                            <a href="#shop" class="btn-view-all">
+                            <a href="collection.html" class="btn-view-all">
                                 <span>View All</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
@@ -476,14 +519,14 @@
                                                 <span class="badge-new">New</span>
                                                 <button class="btn-wishlist" aria-label="Add to wishlist"><i
                                                         class="bi bi-heart"></i></button>
-                                                <img src="img/card_purple.jpg" alt="Royal Purple Churidar Set"
-                                                    loading="lazy">
+                                                <a href="productdetail.html" class="d-block w-100 h-100 overflow-hidden"><img src="img/card_purple.jpg" alt="Royal Purple Churidar Set"
+                                                    loading="lazy"></a>
                                                 <button class="card-quick-add" onclick="addToBag()"><i
                                                         class="bi bi-bag-plus"></i> Quick Add</button>
                                             </div>
                                             <div class="card-body-content">
-                                                <h4 class="card-item-title" title="Royal Purple Churidar Set">Royal
-                                                    Purple Churidar Set</h4>
+                                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="card-item-title" title="Royal Purple Churidar Set">Royal
+                                                    Purple Churidar Set</h4></a>
                                                 <div class="card-item-price">₹ 2,499</div>
                                                 <div class="card-rating-row">
                                                     <div class="stars-gold"><i class="bi bi-star-fill"></i><i
@@ -511,14 +554,14 @@
                                             <div class="card-img-box">
                                                 <button class="btn-wishlist" aria-label="Add to wishlist"><i
                                                         class="bi bi-heart"></i></button>
-                                                <img src="img/card_green.jpg" alt="Classic Green Churidar Set"
-                                                    loading="lazy">
+                                                <a href="productdetail.html" class="d-block w-100 h-100 overflow-hidden"><img src="img/card_green.jpg" alt="Classic Green Churidar Set"
+                                                    loading="lazy"></a>
                                                 <button class="card-quick-add" onclick="addToBag()"><i
                                                         class="bi bi-bag-plus"></i> Quick Add</button>
                                             </div>
                                             <div class="card-body-content">
-                                                <h4 class="card-item-title" title="Classic Green Churidar Set">Classic
-                                                    Green Churidar Set</h4>
+                                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="card-item-title" title="Classic Green Churidar Set">Classic
+                                                    Green Churidar Set</h4></a>
                                                 <div class="card-item-price">₹ 1,899</div>
                                                 <div class="card-rating-row">
                                                     <div class="stars-gold"><i class="bi bi-star-fill"></i><i
@@ -546,14 +589,14 @@
                                             <div class="card-img-box">
                                                 <button class="btn-wishlist" aria-label="Add to wishlist"><i
                                                         class="bi bi-heart"></i></button>
-                                                <img src="img/card_pink.jpg" alt="Rose Pink Churidar Set"
-                                                    loading="lazy">
+                                                <a href="productdetail.html" class="d-block w-100 h-100 overflow-hidden"><img src="img/card_pink.jpg" alt="Rose Pink Churidar Set"
+                                                    loading="lazy"></a>
                                                 <button class="card-quick-add" onclick="addToBag()"><i
                                                         class="bi bi-bag-plus"></i> Quick Add</button>
                                             </div>
                                             <div class="card-body-content">
-                                                <h4 class="card-item-title" title="Rose Pink Churidar Set">Rose Pink
-                                                    Churidar Set</h4>
+                                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="card-item-title" title="Rose Pink Churidar Set">Rose Pink
+                                                    Churidar Set</h4></a>
                                                 <div class="card-item-price">₹ 2,499</div>
                                                 <div class="card-rating-row">
                                                     <div class="stars-gold"><i class="bi bi-star-fill"></i><i
@@ -580,13 +623,13 @@
                                             <div class="card-img-box">
                                                 <button class="btn-wishlist" aria-label="Add to wishlist"><i
                                                         class="bi bi-heart"></i></button>
-                                                <img src="img/card_mustard.jpg" alt="Mustard Yellow Set" loading="lazy">
+                                                <a href="productdetail.html" class="d-block w-100 h-100 overflow-hidden"><img src="img/card_mustard.jpg" alt="Mustard Yellow Set" loading="lazy"></a>
                                                 <button class="card-quick-add" onclick="addToBag()"><i
                                                         class="bi bi-bag-plus"></i> Quick Add</button>
                                             </div>
                                             <div class="card-body-content">
-                                                <h4 class="card-item-title" title="Mustard Yellow Set">Mustard Yellow
-                                                    Set</h4>
+                                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="card-item-title" title="Mustard Yellow Set">Mustard Yellow
+                                                    Set</h4></a>
                                                 <div class="card-item-price">₹ 1,499</div>
                                                 <div class="card-rating-row">
                                                     <div class="stars-gold"><i class="bi bi-star-fill"></i><i
@@ -614,14 +657,14 @@
                                             <div class="card-img-box">
                                                 <button class="btn-wishlist" aria-label="Add to wishlist"><i
                                                         class="bi bi-heart"></i></button>
-                                                <img src="img/card_teal.jpg" alt="Teal Blue Churidar Set"
-                                                    loading="lazy">
+                                                <a href="productdetail.html" class="d-block w-100 h-100 overflow-hidden"><img src="img/card_teal.jpg" alt="Teal Blue Churidar Set"
+                                                    loading="lazy"></a>
                                                 <button class="card-quick-add" onclick="addToBag()"><i
                                                         class="bi bi-bag-plus"></i> Quick Add</button>
                                             </div>
                                             <div class="card-body-content">
-                                                <h4 class="card-item-title" title="Teal Blue Churidar Set">Teal Blue
-                                                    Churidar Set</h4>
+                                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="card-item-title" title="Teal Blue Churidar Set">Teal Blue
+                                                    Churidar Set</h4></a>
                                                 <div class="card-item-price">₹ 2,799</div>
                                                 <div class="card-rating-row">
                                                     <div class="stars-gold"><i class="bi bi-star-fill"></i><i
@@ -656,7 +699,7 @@
 
         <!-- ===================== 3. PROMOTIONAL OFFER BANNER (White Background Container) ===================== -->
         <section class="offer-banner-section section-bg-white luxury-section-pad py-4 py-lg-5" aria-label="Special Festival Offer">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="promo-banner-card">
                     <div class="row g-0 align-items-center">
 
@@ -682,7 +725,7 @@
                                 </p>
 
                                 <div>
-                                    <a href="#shop" class="btn-shop-pill">
+                                    <a href="collection.html" class="btn-shop-pill">
                                         <span>Shop Now</span>
                                         <i class="bi bi-arrow-right"></i>
                                     </a>
@@ -765,7 +808,7 @@
 
         <!-- ===================== 4. BEST SELLERS SWIPER (White Background) ===================== -->
         <section class="bestsellers-section section-bg-white luxury-section-pad" id="bestsellers" aria-label="Best Selling Churidar Ensembles">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="bestsellers-header-wrap">
                     <div class="section-header-luxury mb-0 text-start" style="text-align: left !important;">
                         <span class="section-eyebrow-gold">Curated Favorites</span>
@@ -1037,7 +1080,7 @@
 
         <!-- ===================== 5. TRENDING OCCASION COLLECTIONS (Ivory Background #fbf6f0) ===================== -->
         <section class="collections-section section-bg-ivory luxury-section-pad" id="collections" aria-label="Trending Occasion Collections">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="section-header-luxury">
                     <span class="section-eyebrow-gold">Signature Edits 2026</span>
                     <h2 class="section-title-luxury">Trending Occasion Collections</h2>
@@ -1048,7 +1091,7 @@
 
                 <div class="collections-grid-luxury">
                     <!-- 1. Wedding Wear (Large) -->
-                    <a href="#shop" class="collection-card-item col-item-large">
+                    <a href="collection.html" class="collection-card-item col-item-large">
                         <img src="img/card_purple.jpg" alt="Wedding Wear Collection" class="collection-bg-img" loading="lazy">
                         <div class="collection-overlay-grad"></div>
                         <div class="collection-card-content">
@@ -1059,7 +1102,7 @@
                     </a>
 
                     <!-- 2. Party Wear (Large) -->
-                    <a href="#shop" class="collection-card-item col-item-large">
+                    <a href="collection.html" class="collection-card-item col-item-large">
                         <img src="img/card_pink.jpg" alt="Party Wear Collection" class="collection-bg-img" loading="lazy">
                         <div class="collection-overlay-grad"></div>
                         <div class="collection-card-content">
@@ -1070,7 +1113,7 @@
                     </a>
 
                     <!-- 3. Festive Wear (Small) -->
-                    <a href="#shop" class="collection-card-item col-item-small">
+                    <a href="collection.html" class="collection-card-item col-item-small">
                         <img src="img/card_mustard.jpg" alt="Festive Wear Collection" class="collection-bg-img" loading="lazy">
                         <div class="collection-overlay-grad"></div>
                         <div class="collection-card-content">
@@ -1081,7 +1124,7 @@
                     </a>
 
                     <!-- 4. Casual Wear (Small) -->
-                    <a href="#shop" class="collection-card-item col-item-small">
+                    <a href="collection.html" class="collection-card-item col-item-small">
                         <img src="img/card_green.jpg" alt="Casual Wear Collection" class="collection-bg-img" loading="lazy">
                         <div class="collection-overlay-grad"></div>
                         <div class="collection-card-content">
@@ -1092,7 +1135,7 @@
                     </a>
 
                     <!-- 5. Office Wear (Small) -->
-                    <a href="#shop" class="collection-card-item col-item-small">
+                    <a href="collection.html" class="collection-card-item col-item-small">
                         <img src="img/card_teal.jpg" alt="Office Wear Collection" class="collection-bg-img" loading="lazy">
                         <div class="collection-overlay-grad"></div>
                         <div class="collection-card-content">
@@ -1107,7 +1150,7 @@
 
         <!-- ===================== 6. SHOP BY ROYAL COLOR (White Background) ===================== -->
         <section class="shop-by-color-section section-bg-white luxury-section-pad" id="shopbycolor" aria-label="Shop by Color">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="section-header-luxury">
                     <span class="section-eyebrow-gold">Palette of Royalty</span>
                     <h2 class="section-title-luxury">Shop by Royal Color</h2>
@@ -1151,7 +1194,7 @@
 
         <!-- ===================== 7. STYLE LOOKBOOK & FEATURES SHOWCASE (Ivory Background #fbf6f0) ===================== -->
         <section class="lookbook-section-wrapper section-bg-ivory luxury-section-pad" id="lookbook" aria-label="Style Lookbook &amp; Features Showcase">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
 
                 <!-- Top Style Lookbook Pill Card -->
                 <div class="lookbook-banner-card" aria-label="Style Lookbook">
@@ -1166,7 +1209,7 @@
                                 Real women. Real styles.<br class="d-none d-sm-inline">
                                 Get inspired by our latest churidar looks.
                             </p>
-                            <a href="#explore" class="btn-lookbook-pill">
+                            <a href="collection.html" class="btn-lookbook-pill">
                                 <span>Explore Lookbook</span>
                                 <i class="bi bi-arrow-right"></i>
                             </a>
@@ -1324,7 +1367,7 @@
 
         <!-- ===================== 8. WHY CHOOSE SARA'S BOUTIQUE (White Background) ===================== -->
         <section class="why-choose-section section-bg-white luxury-section-pad" id="whychoose" aria-label="Why Choose Sara's Boutique">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="section-header-luxury">
                     <span class="section-eyebrow-gold">Boutique Excellence</span>
                     <h2 class="section-title-luxury">Why Women Choose Sara's Boutique</h2>
@@ -1333,8 +1376,8 @@
                     </p>
                 </div>
 
-                <div class="row g-3 g-lg-4 text-center">
-                    <div class="col-6 col-lg">
+                <div class="row g-3 g-lg-4 text-center justify-content-center">
+                    <div class="col-6 col-md-4 col-lg">
                         <div class="why-choose-card-luxury">
                             <div class="feature-circle-icon mx-auto">
                                 <i class="bi bi-gem"></i>
@@ -1343,7 +1386,7 @@
                             <p>100% Pure Mulberry Silk, Organza &amp; Chanderi</p>
                         </div>
                     </div>
-                    <div class="col-6 col-lg">
+                    <div class="col-6 col-md-4 col-lg">
                         <div class="why-choose-card-luxury">
                             <div class="feature-circle-icon mx-auto">
                                 <i class="bi bi-airplane-engines"></i>
@@ -1352,7 +1395,7 @@
                             <p>Express insured dispatch across India &amp; Worldwide</p>
                         </div>
                     </div>
-                    <div class="col-6 col-lg">
+                    <div class="col-6 col-md-4 col-lg">
                         <div class="why-choose-card-luxury">
                             <div class="feature-circle-icon mx-auto">
                                 <i class="bi bi-shield-check"></i>
@@ -1361,7 +1404,7 @@
                             <p>100% Safe encrypted gateways &amp; UPI checkout</p>
                         </div>
                     </div>
-                    <div class="col-6 col-lg">
+                    <div class="col-6 col-md-4 col-lg">
                         <div class="why-choose-card-luxury">
                             <div class="feature-circle-icon mx-auto">
                                 <i class="bi bi-arrow-repeat"></i>
@@ -1370,7 +1413,7 @@
                             <p>7-Day doorstep pickup &amp; hassle-free exchange</p>
                         </div>
                     </div>
-                    <div class="col-12 col-lg">
+                    <div class="col-12 col-md-4 col-lg">
                         <div class="why-choose-card-luxury">
                             <div class="feature-circle-icon mx-auto">
                                 <i class="bi bi-headset"></i>
@@ -1385,7 +1428,7 @@
 
         <!-- ===================== 9. CUSTOMER REVIEWS (Ivory Background #fbf6f0) ===================== -->
         <section class="reviews-section-luxury section-bg-ivory luxury-section-pad" id="reviews" aria-label="Customer Reviews">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="reviews-header-wrap">
                     <div class="section-header-luxury mb-0 text-start" style="text-align: left !important;">
                         <span class="section-eyebrow-gold">Voices of Elegance</span>
@@ -1579,7 +1622,7 @@
 
         <!-- ===================== 10. INSTAGRAM GALLERY (White Background) ===================== -->
         <section class="instagram-section-luxury section-bg-white luxury-section-pad" id="instagram" aria-label="Instagram Gallery">
-            <div class="container-fluid px-3 px-sm-4 px-lg-5">
+            <div class="container">
                 <div class="section-header-luxury">
                     <span class="section-eyebrow-gold">Social Lookbook</span>
                     <h2 class="section-title-luxury">Follow @SarasBoutiqueLuxury</h2>
@@ -1663,12 +1706,12 @@
                 <div class="col-lg-2 col-md-3 col-6">
                     <h3 class="footer-col-title">Quick Links</h3>
                     <ul class="footer-links-list">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#shop">Shop All</a></li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="collection.html">Collections</a></li>
                         <li><a href="#bestsellers">Best Sellers</a></li>
-                        <li><a href="#collections">Occasions</a></li>
-                        <li><a href="#shopbycolor">Shop by Color</a></li>
-                        <li><a href="#lookbook">Style Lookbook</a></li>
+                        <li><a href="#newarrivals">New Arrivals</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
 
@@ -1689,12 +1732,12 @@
                 <div class="col-lg-2 col-md-3 col-6">
                     <h3 class="footer-col-title">Signature Edits</h3>
                     <ul class="footer-links-list">
-                        <li><a href="#">Churidar Sets</a></li>
-                        <li><a href="#">Royal Anarkalis</a></li>
-                        <li><a href="#">Salwar Kameez</a></li>
-                        <li><a href="#">Bridal Trousseau</a></li>
-                        <li><a href="#">Pure Silk Dupattas</a></li>
-                        <li><a href="#">Festive Specials</a></li>
+                        <li><a href="collection.html">Churidar Sets</a></li>
+                        <li><a href="collection.html">Royal Anarkalis</a></li>
+                        <li><a href="collection.html">Salwar Kameez</a></li>
+                        <li><a href="collection.html">Bridal Trousseau</a></li>
+                        <li><a href="collection.html">Pure Silk Dupattas</a></li>
+                        <li><a href="collection.html">Festive Specials</a></li>
                     </ul>
                 </div>
 
@@ -1938,7 +1981,7 @@
             // 4. Swiper.js New Arrivals Slider
             const productsSwiper = new Swiper('#productsSwiper', {
                 slidesPerView: 1.15,
-                spaceBetween: 18,
+                spaceBetween: 14,
                 grabCursor: true,
                 loop: true,
                 pagination: {
@@ -1951,11 +1994,13 @@
                     nextEl: '#swiperNext',
                 },
                 breakpoints: {
-                    480: { slidesPerView: 1.6, spaceBetween: 14 },
-                    640: { slidesPerView: 2.2, spaceBetween: 16 },
-                    900: { slidesPerView: 3, spaceBetween: 16 },
-                    1150: { slidesPerView: 4, spaceBetween: 18 },
-                    1400: { slidesPerView: 4, spaceBetween: 20 },
+                    320: { slidesPerView: 1.15, spaceBetween: 12 },
+                    480: { slidesPerView: 1.5, spaceBetween: 14 },
+                    576: { slidesPerView: 2, spaceBetween: 16 },
+                    768: { slidesPerView: 2.2, spaceBetween: 16 },
+                    992: { slidesPerView: 2.7, spaceBetween: 18 },
+                    1200: { slidesPerView: 3.2, spaceBetween: 18 },
+                    1400: { slidesPerView: 3.5, spaceBetween: 20 },
                 },
                 autoplay: {
                     delay: 3500,
@@ -1964,9 +2009,9 @@
                 },
             });
 
-            // 5. Swiper.js Best Sellers Carousel (5.5 to 6 Cards with Auto Slide)
+            // 5. Swiper.js Best Sellers Carousel (Tuned for luxury container on md, lg, xl, xxl)
             const bestsellersSwiper = new Swiper('#bestsellersSwiper', {
-                slidesPerView: 1.35,
+                slidesPerView: 1.25,
                 spaceBetween: 12,
                 grabCursor: true,
                 loop: true,
@@ -1981,12 +2026,13 @@
                     nextEl: '#bestsellerNext',
                 },
                 breakpoints: {
-                    480: { slidesPerView: 2.2, spaceBetween: 12 },
-                    680: { slidesPerView: 3.2, spaceBetween: 14 },
-                    992: { slidesPerView: 4.2, spaceBetween: 14 },
-                    1200: { slidesPerView: 5.2, spaceBetween: 16 },
-                    1440: { slidesPerView: 5.8, spaceBetween: 16 },
-                    1680: { slidesPerView: 6, spaceBetween: 18 },
+                    320: { slidesPerView: 1.25, spaceBetween: 10 },
+                    480: { slidesPerView: 1.8, spaceBetween: 12 },
+                    576: { slidesPerView: 2.2, spaceBetween: 14 },
+                    768: { slidesPerView: 2.8, spaceBetween: 14 },
+                    992: { slidesPerView: 3.5, spaceBetween: 16 },
+                    1200: { slidesPerView: 4.2, spaceBetween: 16 },
+                    1400: { slidesPerView: 4.8, spaceBetween: 18 },
                 },
                 autoplay: {
                     delay: 2400,
@@ -1997,8 +2043,8 @@
 
             // 6. Swiper.js Customer Reviews Carousel
             const reviewsSwiper = new Swiper('#reviewsSwiper', {
-                slidesPerView: 1.15,
-                spaceBetween: 16,
+                slidesPerView: 1.08,
+                spaceBetween: 14,
                 grabCursor: true,
                 loop: true,
                 speed: 700,
@@ -2012,10 +2058,12 @@
                     nextEl: '#reviewsNext',
                 },
                 breakpoints: {
-                    600: { slidesPerView: 1.8, spaceBetween: 16 },
-                    768: { slidesPerView: 2.2, spaceBetween: 20 },
-                    1024: { slidesPerView: 3, spaceBetween: 24 },
-                    1400: { slidesPerView: 3, spaceBetween: 28 },
+                    320: { slidesPerView: 1.08, spaceBetween: 12 },
+                    576: { slidesPerView: 1.5, spaceBetween: 16 },
+                    768: { slidesPerView: 2, spaceBetween: 18 },
+                    992: { slidesPerView: 2.5, spaceBetween: 20 },
+                    1200: { slidesPerView: 3, spaceBetween: 24 },
+                    1400: { slidesPerView: 3, spaceBetween: 24 },
                 },
                 autoplay: {
                     delay: 3500,
