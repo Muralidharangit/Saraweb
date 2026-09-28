@@ -724,7 +724,7 @@ img, svg, video, canvas, audio, iframe, embed, object {
 
 @media (max-width: 768px) {
     .hero-banner-section {
-        background-position: 75% center;
+        background-position: left;
         padding: 3rem 0 2rem;
     }
     .hero-slider-nav { display: none; }
