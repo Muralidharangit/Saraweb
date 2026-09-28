@@ -35,17 +35,46 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: auto;
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
+    scrollbar-width: thin;
+    scrollbar-color: #d4af37 #170024;
+}
+
+/* ── Luxury Theme Scrollbar ── */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #170024;
+    border-left: 1px solid rgba(212, 175, 55, 0.18);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #f5d77f 0%, #d4af37 40%, #b8860b 80%, #8c6209 100%);
+    border-radius: 10px;
+    border: 2px solid #170024;
+    box-shadow: inset 0 0 4px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #fff3cd 0%, #f5d77f 45%, #d4af37 100%);
+    box-shadow: 0 0 10px rgba(212, 175, 55, 0.65), inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+::-webkit-scrollbar-corner {
+    background: #170024;
 }
 
 body {
     font-family: var(--body-font);
     background-color: var(--dark-purple);
     color: var(--cream);
-    overflow-x: hidden;
     width: 100%;
     max-width: 100%;
     min-height: 100vh;
@@ -288,58 +317,103 @@ img, svg, video, canvas, audio, iframe, embed, object {
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 0.75rem;
 }
 
 .action-icon-btn {
-    background: transparent;
-    border: none;
-    color: var(--nav-text);
-    font-size: 1.3rem;
+    background: rgba(212, 175, 55, 0.08);
+    border: 1px solid rgba(212, 175, 55, 0.25);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    color: #F8F4EC;
+    font-size: 1.05rem;
     position: relative;
     cursor: pointer;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    transition: color 0.25s ease, transform 0.2s ease;
-    padding: 4px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.08);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    padding: 0;
     text-decoration: none;
 }
 
+.action-icon-btn i {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.25s ease, color 0.25s ease;
+}
+
 .action-icon-btn:hover {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(229, 195, 120, 0.12) 100%);
     color: var(--gold);
-    transform: translateY(-1px);
+    border-color: rgba(212, 175, 55, 0.65);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35), 0 0 10px rgba(212, 175, 55, 0.2), inset 0 1px 2px rgba(255, 255, 255, 0.2);
+}
+
+.action-icon-btn:hover i {
+    transform: scale(1.1);
+    color: #FFE58F;
+}
+
+.action-icon-btn:active {
+    transform: translateY(0) scale(0.96);
+    box-shadow: 0 2px 6px rgba(212, 175, 55, 0.25);
 }
 
 .badge-cart-gold {
     position: absolute;
-    top: -4px;
-    right: -8px;
+    top: -3px;
+    right: -3px;
     background: radial-gradient(circle at 30% 30%, #FFEFA6, var(--gold), var(--gold-dark));
     color: var(--dark-purple);
     font-weight: 700;
-    font-size: 0.68rem;
-    width: 19px;
-    height: 19px;
+    font-size: 0.65rem;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
-    border: 1px solid rgba(255, 255, 255, 0.4);
+    border: 1.5px solid var(--dark-purple);
 }
 
 .luxury-toggler {
-    border: 1px solid rgba(212, 175, 55, 0.4);
-    background: rgba(59, 0, 90, 0.4);
-    border-radius: 8px;
+    border: 1px solid rgba(212, 175, 55, 0.28);
+    background: rgba(212, 175, 55, 0.08);
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
     color: var(--gold);
-    padding: 6px 10px;
-    font-size: 1.25rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    padding: 0;
+    transition: all 0.25s ease;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.luxury-toggler:hover {
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.25) 0%, rgba(229, 195, 120, 0.12) 100%);
+    color: #FFE58F;
+    border-color: rgba(212, 175, 55, 0.65);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(212, 175, 55, 0.35);
 }
 
 .luxury-toggler:focus {
-    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.35);
+    box-shadow: 0 0 0 2px rgba(212, 175, 55, 0.45);
+    outline: none;
 }
 
 .offcanvas-luxury {

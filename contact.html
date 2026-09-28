@@ -46,6 +46,9 @@
 
     <!-- Scoped Contact Page Luxury Stylesheet -->
     <link rel="stylesheet" href="css/contact.css">
+
+    <!-- 2026 Scroll Animation System -->
+    <link rel="stylesheet" href="css/scroll-animation.css">
 </head>
 
 <body>
@@ -62,7 +65,8 @@
                         <span>+91 98765 43210</span>
                     </a>
                     <span class="top-bar-divider d-none d-xl-inline">|</span>
-                    <a href="https://wa.me/919876543210" target="_blank" class="d-none d-xl-inline-flex" title="Chat on WhatsApp" rel="noopener">
+                    <a href="https://wa.me/919876543210" target="_blank" class="d-none d-xl-inline-flex"
+                        title="Chat on WhatsApp" rel="noopener">
                         <i class="bi bi-whatsapp text-gold me-1"></i>
                         <span>WhatsApp Concierge</span>
                     </a>
@@ -73,8 +77,8 @@
                     <div class="top-bar-announcement">
                         <span class="gold-sparkle me-1"><i class="bi bi-stars"></i></span>
                         <span class="announcement-highlight">Festive Edit 2026:</span>
-                        <span class="announcement-text d-none d-sm-inline">Complimentary Insured Express Shipping Across India • Silk Keepsake Box</span>
-                        <span class="announcement-text d-inline d-sm-none">Complimentary Insured Shipping Across India</span>
+                        <span class="announcement-text d-none d-sm-inline">Complimentary Insured</span>
+                        <span class="announcement-text d-inline d-sm-none">Complimentary Insured Shipping</span>
                     </div>
                 </div>
 
@@ -89,11 +93,7 @@
                         <i class="bi bi-geo-alt-fill text-gold me-1"></i>
                         <span>Jubilee Hills, Hyderabad</span>
                     </span>
-                    <span class="top-bar-divider d-none d-xl-inline">|</span>
-                    <span class="top-bar-currency" title="Currency Region">
-                        <i class="bi bi-currency-rupee text-gold"></i>
-                        <span>INR (₹)</span>
-                    </span>
+
                 </div>
 
             </div>
@@ -127,21 +127,22 @@
                     <div class="nav-actions">
                         <!-- Search Trigger -->
                         <button type="button" class="action-icon-btn" data-bs-toggle="modal"
-                            data-bs-target="#searchModal" title="Search Sara's Boutique"
-                            aria-label="Open search modal">
+                            data-bs-target="#searchModal" title="Search Collection" aria-label="Open search modal">
                             <i class="bi bi-search"></i>
                         </button>
 
                         <!-- User Profile / Account -->
-                        <a href="index.html#account" class="action-icon-btn" title="Account / Login" aria-label="Account Login">
+                        <a href="index.html#account" class="action-icon-btn" title="Account / Login"
+                            aria-label="Account Login">
                             <i class="bi bi-person"></i>
                         </a>
 
                         <!-- Cart with luxury gold circle badge "0" -->
-                        <a href="index.html#cart" class="action-icon-btn position-relative" title="Shopping Bag" id="cartBtn" aria-label="Shopping Bag">
+                        <!-- <a href="index.html#cart" class="action-icon-btn position-relative" title="Shopping Bag"
+                            id="cartBtn" aria-label="Shopping Bag">
                             <i class="bi bi-bag"></i>
                             <span class="badge-cart-gold" id="cartCount">0</span>
-                        </a>
+                        </a> -->
                     </div>
 
                     <!-- Mobile Hamburger Toggle -->
@@ -172,7 +173,7 @@
                     <a class="nav-luxury-link fs-5" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-luxury-link fs-5" href="collection.html">Shop &amp; Collections</a>
+                    <a class="nav-luxury-link fs-5" href="collection.html">Collections</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-luxury-link fs-5" href="index.html#newarrivals">New Arrivals</a>
@@ -205,20 +206,17 @@
     <!-- Quick Search Modal -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content luxury-modal-content">
-                <div class="modal-header border-0 pb-0">
-                    <h5 class="font-serif text-white mb-0">Search Sara's Boutique</h5>
+            <div class="modal-content search-modal-content p-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <h5 class="modal-title font-serif text-white m-0" style="font-family: var(--heading-font);">Search
+                        Collection</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <div class="modal-body p-4">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-dark text-white border-warning"
-                            placeholder="Search suits, anarkalis, bridal lehengas..." id="searchInput">
-                        <button class="btn btn-gold-luxury" type="button" onclick="performSearch()">
-                            <i class="bi bi-search"></i> Search
-                        </button>
-                    </div>
+                <div class="position-relative">
+                    <input type="text" class="form-control search-input"
+                        placeholder="Search silk gowns, dresses, accessories...">
+                    <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-warning"></i>
                 </div>
             </div>
         </div>
@@ -226,7 +224,8 @@
 
     <!-- ===================== 3. CONTACT HERO BANNER ===================== -->
     <section class="contact-hero-section" aria-label="Contact Sara's Boutique">
-        <div class="contact-hero-bg-layer" role="img" aria-label="Indian luxury fashion model wearing regal purple lehenga"></div>
+        <div class="contact-hero-bg-layer" role="img"
+            aria-label="Indian luxury fashion model wearing regal purple lehenga"></div>
         <div class="contact-hero-overlay"></div>
         <div class="hero-decor-mandala"></div>
 
@@ -237,26 +236,26 @@
                 <div class="col-lg-8 col-md-8 col-12">
 
                     <!-- Breadcrumb -->
-                    <nav class="hero-breadcrumb-nav" aria-label="breadcrumb">
+                    <nav class="hero-breadcrumb-nav hero-load-item delay-1" aria-label="breadcrumb">
                         <a href="index.html">Home</a>
                         <span class="sep"><i class="bi bi-chevron-right"></i></span>
                         <span class="current">Contact</span>
                     </nav>
 
                     <!-- Main Heading -->
-                    <h1 class="contact-hero-title">Get in Touch</h1>
+                    <h1 class="contact-hero-title hero-load-item delay-2">Get in Touch</h1>
 
                     <!-- Script Accent -->
-                    <div class="contact-hero-script">We're Here to Help</div>
+                    <div class="contact-hero-script hero-load-item delay-3">We're Here to Help</div>
 
                     <!-- Supporting Paragraph -->
-                    <p class="contact-hero-desc">
+                    <p class="contact-hero-desc hero-load-item delay-4">
                         Have questions, feedback, or need assistance? We'd love to hear from you! Reach out to us and
                         our team will get back to you as soon as possible.
                     </p>
 
                     <!-- 3 Support Highlights -->
-                    <div class="hero-highlights-row">
+                    <div class="hero-highlights-row hero-load-item delay-5">
                         <div class="hero-highlight-item">
                             <div class="hero-highlight-icon-box" title="Quick Response">
                                 <i class="bi bi-clock-history"></i>
@@ -292,7 +291,7 @@
 
                 <!-- RIGHT SIDE: Elegant Vertical Script "Fashion Connects Us ♡" -->
                 <div class="col-lg-4 col-md-4 col-12 d-none d-md-block">
-                    <div class="hero-quote-wrapper">
+                    <div class="hero-quote-wrapper hero-load-scale delay-4">
                         <div class="hero-quote-script">
                             Fashion<br>Connects<br>Us
                         </div>
@@ -325,7 +324,7 @@
             <div class="row g-5 align-items-start">
 
                 <!-- ── 5. LEFT COLUMN: CONTACT INFORMATION ── -->
-                <div class="col-lg-5 col-12">
+                <div class="col-lg-5 col-12 reveal-left">
                     <span class="section-gold-eyebrow">CONTACT INFORMATION</span>
                     <h2 class="contact-info-title">Let's Talk</h2>
                     <div class="contact-info-script">We're here for you</div>
@@ -375,7 +374,8 @@
                             <div>
                                 <h4 class="contact-item-heading">Email Address</h4>
                                 <div class="contact-item-body">
-                                    <a href="mailto:support@sarasboutique.com" class="fw-semibold text-dark">support@sarasboutique.com</a><br>
+                                    <a href="mailto:support@sarasboutique.com"
+                                        class="fw-semibold text-dark">support@sarasboutique.com</a><br>
                                     We reply within 24 hours
                                 </div>
                             </div>
@@ -389,16 +389,20 @@
                             <div>
                                 <h4 class="contact-item-heading">Follow Us</h4>
                                 <div class="contact-social-icons-row">
-                                    <a href="#instagram" class="contact-social-btn" title="Follow on Instagram" aria-label="Instagram">
+                                    <a href="#instagram" class="contact-social-btn" title="Follow on Instagram"
+                                        aria-label="Instagram">
                                         <i class="bi bi-instagram"></i>
                                     </a>
-                                    <a href="#facebook" class="contact-social-btn" title="Follow on Facebook" aria-label="Facebook">
+                                    <a href="#facebook" class="contact-social-btn" title="Follow on Facebook"
+                                        aria-label="Facebook">
                                         <i class="bi bi-facebook"></i>
                                     </a>
-                                    <a href="#pinterest" class="contact-social-btn" title="Follow on Pinterest" aria-label="Pinterest">
+                                    <a href="#pinterest" class="contact-social-btn" title="Follow on Pinterest"
+                                        aria-label="Pinterest">
                                         <i class="bi bi-pinterest"></i>
                                     </a>
-                                    <a href="#youtube" class="contact-social-btn" title="Subscribe on YouTube" aria-label="YouTube">
+                                    <a href="#youtube" class="contact-social-btn" title="Subscribe on YouTube"
+                                        aria-label="YouTube">
                                         <i class="bi bi-youtube"></i>
                                     </a>
                                 </div>
@@ -410,7 +414,7 @@
 
                 <!-- ── 6, 7 & 8. RIGHT COLUMN: CONTACT FORM ── -->
                 <div class="col-lg-7 col-12">
-                    <div class="contact-form-luxury-card">
+                    <div class="contact-form-luxury-card reveal-right">
 
                         <span class="section-gold-eyebrow">SEND US A MESSAGE</span>
                         <h3 class="form-heading">Drop Us a Message</h3>
@@ -435,7 +439,8 @@
                                     </label>
                                     <input type="email" class="form-control-luxury" id="emailInput"
                                         placeholder="you@example.com" required autocomplete="email">
-                                    <div class="form-feedback-error" id="emailError">Please enter a valid email address.</div>
+                                    <div class="form-feedback-error" id="emailError">Please enter a valid email address.
+                                    </div>
                                 </div>
                             </div>
 
@@ -455,11 +460,13 @@
                                     <option value="" disabled selected>Select an option</option>
                                     <option value="General Inquiry">General Inquiry</option>
                                     <option value="Order Status & Tracking">Order Status & Tracking</option>
-                                    <option value="Custom Fitting & Bridal Concierge">Custom Fitting & Bridal Concierge</option>
+                                    <option value="Custom Fitting & Bridal Concierge">Custom Fitting & Bridal Concierge
+                                    </option>
                                     <option value="Returns & Exchanges">Returns & Exchanges</option>
                                     <option value="Wholesale & Collaborations">Wholesale & Collaborations</option>
                                 </select>
-                                <div class="form-feedback-error" id="subjectError">Please select a subject for your message.</div>
+                                <div class="form-feedback-error" id="subjectError">Please select a subject for your
+                                    message.</div>
                             </div>
 
                             <!-- Row 4: Message Textarea -->
@@ -469,7 +476,8 @@
                                 </label>
                                 <textarea class="form-control-luxury" id="messageTextarea" rows="4"
                                     placeholder="Type your message here..." required></textarea>
-                                <div class="form-feedback-error" id="messageError">Please write your message (at least 10 characters).</div>
+                                <div class="form-feedback-error" id="messageError">Please write your message (at least
+                                    10 characters).</div>
                             </div>
 
                             <!-- Form Action Row: Submit Button + Decorative Note -->
@@ -477,7 +485,8 @@
                                 <button type="submit" class="btn-send-message" id="submitBtn">
                                     <span id="btnText">Send Message</span>
                                     <i class="bi bi-arrow-right" id="btnArrow"></i>
-                                    <span class="spinner-border spinner-border-sm d-none" id="btnSpinner" role="status" aria-hidden="true"></span>
+                                    <span class="spinner-border spinner-border-sm d-none" id="btnSpinner" role="status"
+                                        aria-hidden="true"></span>
                                 </button>
 
                                 <div class="form-decorative-signoff">
@@ -499,11 +508,12 @@
     <section class="store-location-section" aria-label="Our Flagship Store Location in Green Park New Delhi">
         <div class="container">
 
-            <div class="location-unified-card">
+            <div class="location-unified-card reveal-scale">
 
                 <!-- Col 1: Storefront Photo -->
                 <div class="location-store-photo-wrap">
-                    <img src="img/contact_store.jpg" alt="Sara's Boutique Flagship Store in Green Park New Delhi" loading="lazy">
+                    <img src="img/contact_store.jpg" alt="Sara's Boutique Flagship Store in Green Park New Delhi"
+                        loading="lazy">
                 </div>
 
                 <!-- Col 2: Visit Our Store Information Box -->
@@ -519,7 +529,8 @@
                         latest styles, touch our mulberry silks, and meet our personal bridal stylists.
                     </p>
 
-                    <a href="https://maps.google.com/?q=Green+Park+Market+New+Delhi" target="_blank" rel="noopener noreferrer" class="btn-directions">
+                    <a href="https://maps.google.com/?q=Green+Park+Market+New+Delhi" target="_blank"
+                        rel="noopener noreferrer" class="btn-directions">
                         <span>Get Directions</span>
                         <i class="bi bi-arrow-right"></i>
                     </a>
@@ -527,10 +538,12 @@
 
                 <!-- Col 3: Map Section with Custom Location Pin -->
                 <div class="location-map-wrap">
-                    <img src="img/contact_map.jpg" alt="Green Park New Delhi Map Overview" class="location-map-bg-img" loading="lazy">
+                    <img src="img/contact_map.jpg" alt="Green Park New Delhi Map Overview" class="location-map-bg-img"
+                        loading="lazy">
 
                     <!-- Interactive Floating Pin & Location Tooltip -->
-                    <div class="map-interactive-pin-box" onclick="showToast('Sara\'s Boutique: 123 Fashion Street, Green Park, New Delhi – 110016');">
+                    <div class="map-interactive-pin-box"
+                        onclick="showToast('Sara\'s Boutique: 123 Fashion Street, Green Park, New Delhi – 110016');">
                         <div class="map-custom-marker">
                             <i class="bi bi-geo-alt-fill"></i>
                         </div>
@@ -549,10 +562,10 @@
     <!-- ===================== 11. SERVICE BENEFITS STRIP ===================== -->
     <section class="service-benefits-strip" aria-label="Sara's Boutique Service Guarantees">
         <div class="container">
-            <div class="row g-4 align-items-center">
+            <div class="row g-4 align-items-center stagger-group">
 
                 <!-- Benefit 1: Free Shipping -->
-                <div class="col-lg-3 col-sm-6 col-12">
+                <div class="col-lg-3 col-sm-6 col-12 stagger-item">
                     <div class="benefit-col-item">
                         <div class="benefit-icon-ring" title="Free Shipping Across India">
                             <i class="bi bi-truck"></i>
@@ -565,7 +578,7 @@
                 </div>
 
                 <!-- Benefit 2: Easy Returns -->
-                <div class="col-lg-3 col-sm-6 col-12">
+                <div class="col-lg-3 col-sm-6 col-12 stagger-item">
                     <div class="benefit-col-item">
                         <div class="benefit-icon-ring" title="Easy 7-Day Returns">
                             <i class="bi bi-box-seam"></i>
@@ -578,7 +591,7 @@
                 </div>
 
                 <!-- Benefit 3: Secure Payments -->
-                <div class="col-lg-3 col-sm-6 col-12">
+                <div class="col-lg-3 col-sm-6 col-12 stagger-item">
                     <div class="benefit-col-item">
                         <div class="benefit-icon-ring" title="100% Safe and Encrypted Payments">
                             <i class="bi bi-shield-check"></i>
@@ -591,7 +604,7 @@
                 </div>
 
                 <!-- Benefit 4: Customer Support -->
-                <div class="col-lg-3 col-sm-6 col-12">
+                <div class="col-lg-3 col-sm-6 col-12 stagger-item">
                     <div class="benefit-col-item">
                         <div class="benefit-icon-ring" title="Friendly Stylist & Customer Support">
                             <i class="bi bi-headset"></i>
@@ -613,9 +626,10 @@
             <div class="row g-5 align-items-center">
 
                 <!-- LEFT SIDE: Fabric Image + Heading + Button -->
-                <div class="col-lg-5 col-12">
+                <div class="col-lg-5 col-12 reveal-left">
                     <div class="faq-left-media-wrap">
-                        <img src="img/contact_faq_fabric.jpg" alt="Handcrafted Gold Zardozi Embroidery on Purple Silk" loading="lazy">
+                        <img src="img/contact_faq_fabric.jpg" alt="Handcrafted Gold Zardozi Embroidery on Purple Silk"
+                            loading="lazy">
                     </div>
 
                     <span class="section-gold-eyebrow">QUICK ANSWERS</span>
@@ -624,14 +638,15 @@
                         Find quick answers to the most common questions about our products, shipping, returns and more.
                     </p>
 
-                    <a href="#contactInquiryForm" class="btn-view-all-faqs" onclick="document.getElementById('subjectSelect').value='General Inquiry';">
+                    <a href="#contactInquiryForm" class="btn-view-all-faqs"
+                        onclick="document.getElementById('subjectSelect').value='General Inquiry';">
                         <span>View All FAQs</span>
                         <i class="bi bi-arrow-right"></i>
                     </a>
                 </div>
 
                 <!-- RIGHT SIDE: Working Interactive Accordion -->
-                <div class="col-lg-7 col-12">
+                <div class="col-lg-7 col-12 reveal-right">
                     <div class="faq-accordion-container" id="faqAccordion">
 
                         <!-- FAQ 1 -->
@@ -641,7 +656,9 @@
                                 <span class="faq-toggle-icon"><i class="bi bi-plus"></i></span>
                             </button>
                             <div class="faq-body-content">
-                                Once your bespoke ensemble is dispatched, you will receive an SMS and email notification with an insured tracking number. You can also view live delivery milestones directly from our Customer Care desk or by contacting our styling team on WhatsApp.
+                                Once your bespoke ensemble is dispatched, you will receive an SMS and email notification
+                                with an insured tracking number. You can also view live delivery milestones directly
+                                from our Customer Care desk or by contacting our styling team on WhatsApp.
                             </div>
                         </div>
 
@@ -652,7 +669,9 @@
                                 <span class="faq-toggle-icon"><i class="bi bi-plus"></i></span>
                             </button>
                             <div class="faq-body-content">
-                                We offer a hassle-free 7-day return and exchange policy on all standard ready-to-wear pieces, provided garments are unworn with original luxury tags and security seals intact. Custom-tailored bridal pieces undergo dedicated fitting sessions.
+                                We offer a hassle-free 7-day return and exchange policy on all standard ready-to-wear
+                                pieces, provided garments are unworn with original luxury tags and security seals
+                                intact. Custom-tailored bridal pieces undergo dedicated fitting sessions.
                             </div>
                         </div>
 
@@ -663,7 +682,9 @@
                                 <span class="faq-toggle-icon"><i class="bi bi-plus"></i></span>
                             </button>
                             <div class="faq-body-content">
-                                Yes! Sara's Boutique proudly ships worldwide including the USA, UK, Canada, UAE, Singapore, and Australia via DHL Express and FedEx International Priority with full doorstep customs clearance and insurance.
+                                Yes! Sara's Boutique proudly ships worldwide including the USA, UK, Canada, UAE,
+                                Singapore, and Australia via DHL Express and FedEx International Priority with full
+                                doorstep customs clearance and insurance.
                             </div>
                         </div>
 
@@ -674,7 +695,9 @@
                                 <span class="faq-toggle-icon"><i class="bi bi-plus"></i></span>
                             </button>
                             <div class="faq-body-content">
-                                Orders may be modified or cancelled within 24 hours of placement before our master artisans cut the fabric. Please contact our concierge immediately at +91 98765 43210 or via email with your order number.
+                                Orders may be modified or cancelled within 24 hours of placement before our master
+                                artisans cut the fabric. Please contact our concierge immediately at +91 98765 43210 or
+                                via email with your order number.
                             </div>
                         </div>
 
@@ -685,7 +708,9 @@
                                 <span class="faq-toggle-icon"><i class="bi bi-plus"></i></span>
                             </button>
                             <div class="faq-body-content">
-                                We accept all major Indian and international debit/credit cards (Visa, MasterCard, Amex), UPI (Google Pay, PhonePe, Paytm), NetBanking across 50+ banks, EMI options, and Cash on Delivery (COD) for domestic orders under ₹15,000.
+                                We accept all major Indian and international debit/credit cards (Visa, MasterCard,
+                                Amex), UPI (Google Pay, PhonePe, Paytm), NetBanking across 50+ banks, EMI options, and
+                                Cash on Delivery (COD) for domestic orders under ₹15,000.
                             </div>
                         </div>
 
@@ -699,7 +724,7 @@
     <!-- ===================== 14. NEWSLETTER SECTION ===================== -->
     <section class="newsletter-luxury-banner" aria-label="Subscribe to Sara's Boutique Newsletter">
         <div class="container">
-            <div class="row align-items-center g-4">
+            <div class="row align-items-center g-4 reveal-scale">
 
                 <!-- Left Column -->
                 <div class="col-lg-6 col-12">
@@ -713,7 +738,8 @@
                 <!-- Right Column: Pill Form -->
                 <div class="col-lg-6 col-12">
                     <form class="newsletter-pill-input-box" onsubmit="handleNewsletterSubmit(event)">
-                        <input type="email" placeholder="Enter your email address" required aria-label="Enter your email address" id="newsletterEmailInput">
+                        <input type="email" placeholder="Enter your email address" required
+                            aria-label="Enter your email address" id="newsletterEmailInput">
                         <button type="submit" class="btn-subscribe-gold">
                             <span>Subscribe</span>
                             <i class="bi bi-arrow-right"></i>
@@ -726,7 +752,7 @@
     </section>
 
     <!-- ===================== 15. LUXURY THEME FOOTER (EXACT INDEX FOOTER) ===================== -->
-    <footer class="luxury-footer" role="contentinfo">
+    <footer class="luxury-footer reveal" role="contentinfo">
         <div class="container-fluid px-lg-5 px-md-4 px-3">
             <!-- Main Footer Grid -->
             <div class="row g-4 justify-content-between">
@@ -736,11 +762,13 @@
                     <div class="footer-brand">
                         <div class="brand-badge m-0">
                             <a href="index.html" class="d-inline-block" aria-label="Sara's Boutique Home">
-                                <img src="img/logo1.png" alt="Sara's Boutique - Luxury Fashion & Elegance" class="footer-brand-logo">
+                                <img src="img/logo1.png" alt="Sara's Boutique - Luxury Fashion & Elegance"
+                                    class="footer-brand-logo">
                             </a>
                         </div>
                         <p class="footer-brand-desc">
-                            Curators of bespoke Indian ethnic couture, luxury churidar ensembles, and handcrafted bridal heirlooms woven in pure mulberry silk.
+                            Curators of bespoke Indian ethnic couture, luxury churidar ensembles, and handcrafted bridal
+                            heirlooms woven in pure mulberry silk.
                         </p>
 
                         <div class="footer-contact-info">
@@ -783,11 +811,21 @@
                 <div class="col-lg-2 col-md-3 col-6">
                     <h3 class="footer-col-title">Customer Care</h3>
                     <ul class="footer-links-list">
-                        <li><a href="#track-order" onclick="showToast('Enter your order number in our tracking portal to check live status.')">Order Tracking</a></li>
-                        <li><a href="#shipping-policy" onclick="showToast('Free insured express delivery on orders over ₹4,000 across India.')">Shipping &amp; Delivery</a></li>
-                        <li><a href="#returns" onclick="showToast('Hassle-free 7-day returns on unworn items with tags intact.')">Easy Returns &amp; Exchange</a></li>
-                        <li><a href="#size-guide" onclick="showToast('Size Guide: S (34), M (36), L (38), XL (40), XXL (42). Custom tailoring also available.')">Custom Size Fitting</a></li>
-                        <li><a href="#fabric-care" onclick="showToast('Dry Clean Only recommended for pure silk and embroidered ensembles.')">Fabric Care Guide</a></li>
+                        <li><a href="#track-order"
+                                onclick="showToast('Enter your order number in our tracking portal to check live status.')">Order
+                                Tracking</a></li>
+                        <li><a href="#shipping-policy"
+                                onclick="showToast('Free insured express delivery on orders over ₹4,000 across India.')">Shipping
+                                &amp; Delivery</a></li>
+                        <li><a href="#returns"
+                                onclick="showToast('Hassle-free 7-day returns on unworn items with tags intact.')">Easy
+                                Returns &amp; Exchange</a></li>
+                        <li><a href="#size-guide"
+                                onclick="showToast('Size Guide: S (34), M (36), L (38), XL (40), XXL (42). Custom tailoring also available.')">Custom
+                                Size Fitting</a></li>
+                        <li><a href="#fabric-care"
+                                onclick="showToast('Dry Clean Only recommended for pure silk and embroidered ensembles.')">Fabric
+                                Care Guide</a></li>
                         <li><a href="#faqs">FAQs &amp; Help</a></li>
                     </ul>
                 </div>
@@ -809,11 +847,14 @@
                 <div class="col-lg-3 col-md-9 col-12">
                     <h3 class="footer-col-title">Join The Inner Circle</h3>
                     <p class="newsletter-desc">
-                        Subscribe to receive VIP access to private sales, newest designer drops, and exclusive festive styling lookbooks.
+                        Subscribe to receive VIP access to private sales, newest designer drops, and exclusive festive
+                        styling lookbooks.
                     </p>
 
-                    <form class="newsletter-pill-form" onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Sara\'s Inner Circle!'); this.reset();">
-                        <input type="email" class="form-control newsletter-input" placeholder="Your email address" aria-label="Your email address" required>
+                    <form class="newsletter-pill-form"
+                        onsubmit="event.preventDefault(); showToast('Thank you for subscribing to Sara\'s Inner Circle!'); this.reset();">
+                        <input type="email" class="form-control newsletter-input" placeholder="Your email address"
+                            aria-label="Your email address" required>
                         <button class="newsletter-submit-btn" type="submit" aria-label="Subscribe">
                             <i class="bi bi-arrow-right"></i>
                         </button>
@@ -1002,6 +1043,9 @@
             }
         });
     </script>
+
+    <!-- 2026 Scroll Animation Controller -->
+    <script src="js/scroll-animation.js"></script>
 </body>
 
 </html>

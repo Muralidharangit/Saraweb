@@ -83,6 +83,9 @@
 
     <!-- Scoped Product Detail Luxury Page Stylesheet -->
     <link rel="stylesheet" href="css/productdetail.css">
+
+    <!-- 2026 Scroll Animation System -->
+    <link rel="stylesheet" href="css/scroll-animation.css">
 </head>
 
 <body>
@@ -111,8 +114,7 @@
                     <div class="top-bar-announcement">
                         <span class="gold-sparkle me-1"><i class="bi bi-stars"></i></span>
                         <span class="announcement-highlight">Festive Edit 2026:</span>
-                        <span class="announcement-text d-none d-sm-inline">Complimentary Insured Express Shipping Across
-                            India • Silk Keepsake Box</span>
+                        <span class="announcement-text d-none d-sm-inline">Complimentary Insured</span>
                         <span class="announcement-text d-inline d-sm-none">Complimentary Insured Shipping</span>
                     </div>
                 </div>
@@ -128,11 +130,7 @@
                         <i class="bi bi-geo-alt-fill text-gold me-1"></i>
                         <span>Jubilee Hills, Hyderabad</span>
                     </span>
-                    <span class="top-bar-divider d-none d-xl-inline">|</span>
-                    <span class="top-bar-currency" title="Currency Region">
-                        <i class="bi bi-currency-rupee text-gold"></i>
-                        <span>INR (₹)</span>
-                    </span>
+
                 </div>
 
             </div>
@@ -153,7 +151,7 @@
                 <nav class="d-none d-lg-block">
                     <ul class="nav-luxury-links">
                         <li><a href="index.html" class="nav-luxury-link">Home</a></li>
-                        <li><a href="collection.html" class="nav-luxury-link">Collections</a></li>
+                        <li><a href="collection.html" class="nav-luxury-link active">Collections</a></li>
                         <li><a href="index.html#newarrivals" class="nav-luxury-link">New Arrivals</a></li>
                         <li><a href="index.html#bestsellers" class="nav-luxury-link">Best Sellers</a></li>
                         <li><a href="about.html" class="nav-luxury-link">About Us</a></li>
@@ -174,13 +172,6 @@
                         <a href="index.html#account" class="action-icon-btn" title="Account / Login"
                             aria-label="Account">
                             <i class="bi bi-person"></i>
-                        </a>
-
-                        <!-- Wishlist icon with count -->
-                        <a href="collection.html" class="action-icon-btn position-relative" title="My Wishlist"
-                            aria-label="Wishlist">
-                            <i class="bi bi-heart"></i>
-                            <span class="badge-cart-gold" id="navWishlistCount">2</span>
                         </a>
 
                         <!-- Cart icon with luxury gold circle badge -->
@@ -219,7 +210,7 @@
                     <a class="nav-luxury-link fs-5" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-luxury-link active fs-5" href="collection.html">Shop &amp; Collections</a>
+                    <a class="nav-luxury-link active fs-5" href="collection.html">Collections</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-luxury-link fs-5" href="index.html#newarrivals">New Arrivals</a>
@@ -252,19 +243,17 @@
     <!-- ===================== SEARCH MODAL ===================== -->
     <div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content search-modal-content p-4"
-                style="background-color: var(--dark-purple); color: #fff; border: 1.5px solid var(--gold); border-radius: 18px;">
+            <div class="modal-content search-modal-content p-4">
                 <div class="d-flex justify-content-between align-items-center mb-3">
                     <h5 class="modal-title font-serif text-white m-0" style="font-family: var(--heading-font);">Search
-                        Sara's Boutique</h5>
+                        Collection</h5>
                     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"
                         aria-label="Close"></button>
                 </div>
-                <div class="input-group">
-                    <input type="text" id="searchInputField" class="form-control bg-transparent text-white border-warning"
-                        placeholder="Search for Churidar, Silk Suits, Anarkalis...">
-                    <button class="btn text-dark fw-bold px-3" style="background-color: var(--gold);" type="button"
-                        onclick="window.location.href='collection.html'">Search</button>
+                <div class="position-relative">
+                    <input type="text" class="form-control search-input"
+                        placeholder="Search silk gowns, dresses, accessories...">
+                    <i class="bi bi-search position-absolute top-50 end-0 translate-middle-y me-3 text-warning"></i>
                 </div>
             </div>
         </div>
@@ -277,20 +266,21 @@
                 <div class="col-12 col-lg-8">
 
                     <!-- Breadcrumbs (Matching reference: Home > Collections > Churidar Ensembles > Royal Pink Churidar Suit) -->
-                    <nav aria-label="Breadcrumb">
+                    <nav aria-label="Breadcrumb" class="hero-load-item delay-1">
                         <ul class="product-hero-breadcrumbs">
                             <li><a href="index.html">Home</a> <i class="bi bi-chevron-right small"></i></li>
                             <li><a href="collection.html">Collections</a> <i class="bi bi-chevron-right small"></i></li>
-                            <li><a href="collection.html">Churidar Ensembles</a> <i class="bi bi-chevron-right small"></i></li>
+                            <li><a href="collection.html">Churidar Ensembles</a> <i
+                                    class="bi bi-chevron-right small"></i></li>
                             <li class="active" aria-current="page">Royal Pink Churidar Suit</li>
                         </ul>
                     </nav>
 
                     <!-- Main Product Banner Title -->
-                    <h1 class="product-hero-title">Royal Pink Churidar Suit</h1>
+                    <h1 class="product-hero-title hero-load-item delay-2">Royal Pink Churidar Suit</h1>
 
                     <!-- Supporting Tags -->
-                    <div class="product-hero-tags">
+                    <div class="product-hero-tags hero-load-item delay-3">
                         <span>Elegant</span>
                         <span class="dot-sep">•</span>
                         <span>Traditional</span>
@@ -301,7 +291,7 @@
                 </div>
 
                 <!-- Right Side Cursive Motto Callout -->
-                <div class="product-hero-callout d-none d-lg-block">
+                <div class="product-hero-callout d-none d-lg-block hero-load-scale delay-4">
                     <span class="script-motto">Grace in<br>Every Stitch</span>
                     <i class="bi bi-heart heart-accent"></i>
                 </div>
@@ -316,7 +306,7 @@
 
                 <!-- ═════════ LEFT: PRODUCT IMAGE GALLERY ═════════ -->
                 <div class="col-12 col-lg-6 col-xl-6">
-                    <div class="product-gallery-stage">
+                    <div class="product-gallery-stage reveal-left">
 
                         <!-- Left Side Vertical Thumbnail Strip -->
                         <div class="gallery-thumbs-col" id="thumbsContainer">
@@ -340,7 +330,8 @@
                             <!-- Thumb 3: Side Profile View -->
                             <div class="thumb-img-card" data-index="2" onclick="switchProductImage(2)"
                                 title="Pillared Archway Profile View">
-                                <img src="img/detail_pink_2.jpg" alt="Royal Pink Churidar Suit - Pillared Corridor View">
+                                <img src="img/detail_pink_2.jpg"
+                                    alt="Royal Pink Churidar Suit - Pillared Corridor View">
                             </div>
 
                             <!-- Thumb 4: Zardozi Yoke Closeup -->
@@ -362,13 +353,11 @@
                         </div>
 
                         <!-- Center: Large Main Product Image Viewport -->
-                        <div class="gallery-main-viewport" id="mainImgViewport"
-                            onclick="handleMainImageClick(event)">
+                        <div class="gallery-main-viewport" id="mainImgViewport" onclick="handleMainImageClick(event)">
 
                             <!-- Main Image Element -->
                             <img id="mainProductImage" src="img/card_pink.jpg"
-                                alt="Royal Pink Churidar Suit - Luxury Indian Festive Attire"
-                                class="gallery-main-img">
+                                alt="Royal Pink Churidar Suit - Luxury Indian Festive Attire" class="gallery-main-img">
 
                             <!-- Overlaid Left/Right Arrow Controls -->
                             <button type="button" class="gallery-nav-btn prev-btn" onclick="prevProductImage(event)"
@@ -400,7 +389,7 @@
 
                 <!-- ═════════ RIGHT: PRODUCT INFORMATION ═════════ -->
                 <div class="col-12 col-lg-6 col-xl-6">
-                    <div class="product-info-panel">
+                    <div class="product-info-panel reveal-right">
 
                         <!-- Meta Row: Best Seller Badge + Star Rating + Action Tools -->
                         <div class="p-meta-top-row">
@@ -466,23 +455,23 @@
 
                                 <!-- Swatch 2: Emerald Green -->
                                 <div class="color-swatch-circle" style="background-color: #2D5A3F;"
-                                    data-color="Emerald Green"
-                                    onclick="selectColor('Emerald Green', this)" title="Emerald Green"></div>
+                                    data-color="Emerald Green" onclick="selectColor('Emerald Green', this)"
+                                    title="Emerald Green"></div>
 
                                 <!-- Swatch 3: Peacock Blue -->
                                 <div class="color-swatch-circle" style="background-color: #3B5A8C;"
-                                    data-color="Peacock Blue"
-                                    onclick="selectColor('Peacock Blue', this)" title="Peacock Blue"></div>
+                                    data-color="Peacock Blue" onclick="selectColor('Peacock Blue', this)"
+                                    title="Peacock Blue"></div>
 
                                 <!-- Swatch 4: Imperial Purple -->
                                 <div class="color-swatch-circle" style="background-color: #5E2570;"
-                                    data-color="Imperial Purple"
-                                    onclick="selectColor('Imperial Purple', this)" title="Imperial Purple"></div>
+                                    data-color="Imperial Purple" onclick="selectColor('Imperial Purple', this)"
+                                    title="Imperial Purple"></div>
 
                                 <!-- Swatch 5: Golden Beige -->
                                 <div class="color-swatch-circle" style="background-color: #D4B996;"
-                                    data-color="Golden Beige"
-                                    onclick="selectColor('Golden Beige', this)" title="Golden Beige"></div>
+                                    data-color="Golden Beige" onclick="selectColor('Golden Beige', this)"
+                                    title="Golden Beige"></div>
                             </div>
                         </div>
 
@@ -501,21 +490,25 @@
                             </div>
                             <div class="size-pills-row" id="sizePills">
                                 <button type="button" class="btn-size-pill" onclick="selectSize('S', this)">S</button>
-                                <button type="button" class="btn-size-pill active" onclick="selectSize('M', this)">M</button>
+                                <button type="button" class="btn-size-pill active"
+                                    onclick="selectSize('M', this)">M</button>
                                 <button type="button" class="btn-size-pill" onclick="selectSize('L', this)">L</button>
                                 <button type="button" class="btn-size-pill" onclick="selectSize('XL', this)">XL</button>
-                                <button type="button" class="btn-size-pill" onclick="selectSize('XXL', this)">XXL</button>
+                                <button type="button" class="btn-size-pill"
+                                    onclick="selectSize('XXL', this)">XXL</button>
                             </div>
                         </div>
 
                         <!-- Quantity & Urgency Stock Status -->
                         <div class="qty-stock-row">
                             <div class="qty-counter-box">
-                                <button type="button" class="qty-btn" onclick="updateQty(-1)" aria-label="Decrease Quantity">
+                                <button type="button" class="qty-btn" onclick="updateQty(-1)"
+                                    aria-label="Decrease Quantity">
                                     <i class="bi bi-dash"></i>
                                 </button>
                                 <span class="qty-value-display" id="productQty">1</span>
-                                <button type="button" class="qty-btn" onclick="updateQty(1)" aria-label="Increase Quantity">
+                                <button type="button" class="qty-btn" onclick="updateQty(1)"
+                                    aria-label="Increase Quantity">
                                     <i class="bi bi-plus"></i>
                                 </button>
                             </div>
@@ -529,7 +522,8 @@
 
                         <!-- Primary CTA Buttons: Add to Cart & Buy Now -->
                         <div class="p-cta-buttons-row">
-                            <button type="button" class="btn-add-cart-primary" id="mainAddToCartBtn" onclick="handleAddToCart()">
+                            <button type="button" class="btn-add-cart-primary" id="mainAddToCartBtn"
+                                onclick="handleAddToCart()">
                                 <i class="bi bi-bag-plus"></i>
                                 <span>Add to Cart</span>
                             </button>
@@ -573,10 +567,10 @@
     <!-- ===================== PRODUCT BENEFITS 4-FEATURE STRIP ===================== -->
     <section class="product-benefits-strip" aria-label="Product Benefits">
         <div class="container">
-            <div class="row g-4 justify-content-between align-items-center">
+            <div class="row g-4 justify-content-between align-items-center stagger-group">
 
                 <!-- 1. Premium Fabric -->
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-3 stagger-item">
                     <div class="benefit-card-box">
                         <div class="benefit-icon-ring">
                             <i class="bi bi-feather"></i>
@@ -587,7 +581,7 @@
                 </div>
 
                 <!-- 2. Handcrafted Embroidery -->
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-3 stagger-item">
                     <div class="benefit-card-box">
                         <div class="benefit-icon-ring">
                             <i class="bi bi-flower1"></i>
@@ -598,7 +592,7 @@
                 </div>
 
                 <!-- 3. Perfect for Occasions -->
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-3 stagger-item">
                     <div class="benefit-card-box">
                         <div class="benefit-icon-ring">
                             <i class="bi bi-stars"></i>
@@ -609,7 +603,7 @@
                 </div>
 
                 <!-- 4. Elegant Fit -->
-                <div class="col-6 col-lg-3">
+                <div class="col-6 col-lg-3 stagger-item">
                     <div class="benefit-card-box">
                         <div class="benefit-icon-ring">
                             <i class="bi bi-person-check"></i>
@@ -628,21 +622,21 @@
         <div class="container">
 
             <!-- Tab Triggers Bar -->
-            <div class="product-nav-tabs" role="tablist">
+            <div class="product-nav-tabs reveal" role="tablist">
                 <button type="button" class="p-tab-trigger active" role="tab" aria-selected="true"
                     data-target="tabDescription" onclick="switchProductTab('tabDescription', this)">
                     Description
                 </button>
-                <button type="button" class="p-tab-trigger" role="tab" aria-selected="false"
-                    data-target="tabSizeFit" onclick="switchProductTab('tabSizeFit', this)">
+                <button type="button" class="p-tab-trigger" role="tab" aria-selected="false" data-target="tabSizeFit"
+                    onclick="switchProductTab('tabSizeFit', this)">
                     Size &amp; Fit
                 </button>
-                <button type="button" class="p-tab-trigger" role="tab" aria-selected="false"
-                    data-target="tabCare" onclick="switchProductTab('tabCare', this)">
+                <button type="button" class="p-tab-trigger" role="tab" aria-selected="false" data-target="tabCare"
+                    onclick="switchProductTab('tabCare', this)">
                     Care Instructions
                 </button>
-                <button type="button" class="p-tab-trigger" role="tab" aria-selected="false"
-                    data-target="tabShipping" onclick="switchProductTab('tabShipping', this)">
+                <button type="button" class="p-tab-trigger" role="tab" aria-selected="false" data-target="tabShipping"
+                    onclick="switchProductTab('tabShipping', this)">
                     Shipping &amp; Returns
                 </button>
             </div>
@@ -835,19 +829,24 @@
                         <h3 class="tab-section-heading">Heirloom Fabric &amp; Zari Care Guide</h3>
                         <p class="tab-paragraph">
                             Because this ensemble features pure mulberry silk and hand-laid zardozi metallic bullion,
-                            specialized artisanal care is recommended to preserve the garment's luster across generations.
+                            specialized artisanal care is recommended to preserve the garment's luster across
+                            generations.
                         </p>
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="p-3 border rounded-3 bg-light">
-                                    <h6 class="fw-bold text-dark mb-1"><i class="bi bi-droplet-half text-warning me-1"></i> Professional Cleaning</h6>
-                                    <p class="small text-muted mb-0">Always opt for certified dry cleaning with white petroleum spirit.</p>
+                                    <h6 class="fw-bold text-dark mb-1"><i
+                                            class="bi bi-droplet-half text-warning me-1"></i> Professional Cleaning</h6>
+                                    <p class="small text-muted mb-0">Always opt for certified dry cleaning with white
+                                        petroleum spirit.</p>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="p-3 border rounded-3 bg-light">
-                                    <h6 class="fw-bold text-dark mb-1"><i class="bi bi-box2-heart text-warning me-1"></i> Storage In Muslin</h6>
-                                    <p class="small text-muted mb-0">Store wrapped in pure breathable unbleached muslin fabric away from moisture.</p>
+                                    <h6 class="fw-bold text-dark mb-1"><i
+                                            class="bi bi-box2-heart text-warning me-1"></i> Storage In Muslin</h6>
+                                    <p class="small text-muted mb-0">Store wrapped in pure breathable unbleached muslin
+                                        fabric away from moisture.</p>
                                 </div>
                             </div>
                         </div>
@@ -861,12 +860,16 @@
                     <div class="col-12 col-lg-8">
                         <h3 class="tab-section-heading">Complimentary Express Shipping &amp; 7-Day Returns</h3>
                         <p class="tab-paragraph">
-                            Every ensemble is hand-inspected by our head quality curator, scented with signature sandalwood mist, and packaged in a velvet-lined magnetic gift keepsake box.
+                            Every ensemble is hand-inspected by our head quality curator, scented with signature
+                            sandalwood mist, and packaged in a velvet-lined magnetic gift keepsake box.
                         </p>
                         <ul class="tab-checklist">
-                            <li><i class="bi bi-check-circle-fill"></i> <span>Orders dispatched within 24–48 hours from our Hyderabad Flagship Atelier.</span></li>
-                            <li><i class="bi bi-check-circle-fill"></i> <span>Delivered via premium air couriers (Bluedart / DTDC Express) within 3–5 business days across India.</span></li>
-                            <li><i class="bi bi-check-circle-fill"></i> <span>Hassle-free 7-day pickup and size exchange guarantee.</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <span>Orders dispatched within 24–48 hours from
+                                    our Hyderabad Flagship Atelier.</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <span>Delivered via premium air couriers
+                                    (Bluedart / DTDC Express) within 3–5 business days across India.</span></li>
+                            <li><i class="bi bi-check-circle-fill"></i> <span>Hassle-free 7-day pickup and size exchange
+                                    guarantee.</span></li>
                         </ul>
                     </div>
                 </div>
@@ -880,13 +883,13 @@
         <div class="container">
 
             <!-- Section Heading -->
-            <div class="section-header-wrap text-start">
+            <div class="section-header-wrap text-start reveal">
                 <h2 class="section-main-heading">You May Also Like</h2>
                 <p class="section-sub-motto">Complete your look with these beautiful pieces</p>
             </div>
 
             <!-- Carousel Stage -->
-            <div class="carousel-outer-wrapper">
+            <div class="carousel-outer-wrapper reveal delay-1">
 
                 <!-- Navigation Arrows -->
                 <button type="button" class="carousel-ctrl-btn btn-prev" id="prevRelatedBtn"
@@ -906,15 +909,22 @@
                         <article class="collection-product-card">
                             <div class="c-card-img-wrap">
                                 <span class="badge-card-pill badge-bestseller">Best Seller</span>
-                                <button type="button" class="btn-card-wishlist" onclick="toggleWishlist(this, 'Mustard Embroidered Suit')" aria-label="Add to Wishlist">
+                                <button type="button" class="btn-card-wishlist"
+                                    onclick="toggleWishlist(this, 'Mustard Embroidered Suit')"
+                                    aria-label="Add to Wishlist">
                                     <i class="bi bi-heart"></i>
                                 </button>
-                                <a href="productdetail.html" class="d-block overflow-hidden"><img src="img/card_mustard.jpg" alt="Mustard Embroidered Suit" loading="lazy"></a>
+                                <a href="productdetail.html" class="d-block overflow-hidden"><img
+                                        src="img/card_mustard.jpg" alt="Mustard Embroidered Suit" loading="lazy"></a>
                             </div>
                             <div class="c-card-body">
-                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="c-card-title">Mustard Embroidered Suit</h4></a>
+                                <a href="productdetail.html" class="text-decoration-none text-reset">
+                                    <h4 class="c-card-title">Mustard Embroidered Suit</h4>
+                                </a>
                                 <div class="c-card-rating">
-                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
                                     <span class="c-rating-num">4.7</span>
                                     <span class="c-review-count">(98)</span>
                                 </div>
@@ -924,11 +934,13 @@
                                     <span class="c-price-discount">22% OFF</span>
                                 </div>
                                 <div class="c-card-swatches">
-                                    <span class="c-swatch-dot" style="background-color: #E5A93B;" title="Mustard Gold"></span>
+                                    <span class="c-swatch-dot" style="background-color: #E5A93B;"
+                                        title="Mustard Gold"></span>
                                     <span class="c-swatch-dot" style="background-color: #5E2570;" title="Purple"></span>
                                     <span class="c-swatch-dot" style="background-color: #2D5A3F;" title="Green"></span>
                                 </div>
-                                <button type="button" class="btn-card-add-cart" onclick="addToBag('Mustard Embroidered Suit')">
+                                <button type="button" class="btn-card-add-cart"
+                                    onclick="addToBag('Mustard Embroidered Suit')">
                                     <i class="bi bi-bag"></i> Add to Cart
                                 </button>
                             </div>
@@ -940,15 +952,22 @@
                         <article class="collection-product-card">
                             <div class="c-card-img-wrap">
                                 <span class="badge-card-pill badge-trending">Trending</span>
-                                <button type="button" class="btn-card-wishlist" onclick="toggleWishlist(this, 'Teal Blue Churidar Set')" aria-label="Add to Wishlist">
+                                <button type="button" class="btn-card-wishlist"
+                                    onclick="toggleWishlist(this, 'Teal Blue Churidar Set')"
+                                    aria-label="Add to Wishlist">
                                     <i class="bi bi-heart"></i>
                                 </button>
-                                <a href="productdetail.html" class="d-block overflow-hidden"><img src="img/card_teal.jpg" alt="Teal Blue Churidar Set" loading="lazy"></a>
+                                <a href="productdetail.html" class="d-block overflow-hidden"><img
+                                        src="img/card_teal.jpg" alt="Teal Blue Churidar Set" loading="lazy"></a>
                             </div>
                             <div class="c-card-body">
-                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="c-card-title">Teal Blue Churidar Set</h4></a>
+                                <a href="productdetail.html" class="text-decoration-none text-reset">
+                                    <h4 class="c-card-title">Teal Blue Churidar Set</h4>
+                                </a>
                                 <div class="c-card-rating">
-                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
                                     <span class="c-rating-num">4.6</span>
                                     <span class="c-review-count">(76)</span>
                                 </div>
@@ -958,11 +977,13 @@
                                     <span class="c-price-discount">20% OFF</span>
                                 </div>
                                 <div class="c-card-swatches">
-                                    <span class="c-swatch-dot" style="background-color: #3B5A8C;" title="Teal Blue"></span>
+                                    <span class="c-swatch-dot" style="background-color: #3B5A8C;"
+                                        title="Teal Blue"></span>
                                     <span class="c-swatch-dot" style="background-color: #E88B9E;" title="Pink"></span>
                                     <span class="c-swatch-dot" style="background-color: #D4B996;" title="Beige"></span>
                                 </div>
-                                <button type="button" class="btn-card-add-cart" onclick="addToBag('Teal Blue Churidar Set')">
+                                <button type="button" class="btn-card-add-cart"
+                                    onclick="addToBag('Teal Blue Churidar Set')">
                                     <i class="bi bi-bag"></i> Add to Cart
                                 </button>
                             </div>
@@ -974,15 +995,22 @@
                         <article class="collection-product-card">
                             <div class="c-card-img-wrap">
                                 <span class="badge-card-pill badge-bestseller">Best Seller</span>
-                                <button type="button" class="btn-card-wishlist" onclick="toggleWishlist(this, 'Purple Georgette Suit')" aria-label="Add to Wishlist">
+                                <button type="button" class="btn-card-wishlist"
+                                    onclick="toggleWishlist(this, 'Purple Georgette Suit')"
+                                    aria-label="Add to Wishlist">
                                     <i class="bi bi-heart"></i>
                                 </button>
-                                <a href="productdetail.html" class="d-block overflow-hidden"><img src="img/card_purple.jpg" alt="Purple Georgette Suit" loading="lazy"></a>
+                                <a href="productdetail.html" class="d-block overflow-hidden"><img
+                                        src="img/card_purple.jpg" alt="Purple Georgette Suit" loading="lazy"></a>
                             </div>
                             <div class="c-card-body">
-                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="c-card-title">Purple Georgette Suit</h4></a>
+                                <a href="productdetail.html" class="text-decoration-none text-reset">
+                                    <h4 class="c-card-title">Purple Georgette Suit</h4>
+                                </a>
                                 <div class="c-card-rating">
-                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                                     <span class="c-rating-num">4.9</span>
                                     <span class="c-review-count">(143)</span>
                                 </div>
@@ -996,7 +1024,8 @@
                                     <span class="c-swatch-dot" style="background-color: #3B5A8C;" title="Blue"></span>
                                     <span class="c-swatch-dot" style="background-color: #E5A93B;" title="Yellow"></span>
                                 </div>
-                                <button type="button" class="btn-card-add-cart" onclick="addToBag('Purple Georgette Suit')">
+                                <button type="button" class="btn-card-add-cart"
+                                    onclick="addToBag('Purple Georgette Suit')">
                                     <i class="bi bi-bag"></i> Add to Cart
                                 </button>
                             </div>
@@ -1008,15 +1037,22 @@
                         <article class="collection-product-card">
                             <div class="c-card-img-wrap">
                                 <span class="badge-card-pill badge-newarrival">New Arrival</span>
-                                <button type="button" class="btn-card-wishlist" onclick="toggleWishlist(this, 'Sage Green Churidar Set')" aria-label="Add to Wishlist">
+                                <button type="button" class="btn-card-wishlist"
+                                    onclick="toggleWishlist(this, 'Sage Green Churidar Set')"
+                                    aria-label="Add to Wishlist">
                                     <i class="bi bi-heart"></i>
                                 </button>
-                                <a href="productdetail.html" class="d-block overflow-hidden"><img src="img/card_green.jpg" alt="Sage Green Churidar Set" loading="lazy"></a>
+                                <a href="productdetail.html" class="d-block overflow-hidden"><img
+                                        src="img/card_green.jpg" alt="Sage Green Churidar Set" loading="lazy"></a>
                             </div>
                             <div class="c-card-body">
-                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="c-card-title">Sage Green Churidar Set</h4></a>
+                                <a href="productdetail.html" class="text-decoration-none text-reset">
+                                    <h4 class="c-card-title">Sage Green Churidar Set</h4>
+                                </a>
                                 <div class="c-card-rating">
-                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
+                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div>
                                     <span class="c-rating-num">4.5</span>
                                     <span class="c-review-count">(68)</span>
                                 </div>
@@ -1026,11 +1062,13 @@
                                     <span class="c-price-discount">20% OFF</span>
                                 </div>
                                 <div class="c-card-swatches">
-                                    <span class="c-swatch-dot" style="background-color: #2D5A3F;" title="Sage Green"></span>
+                                    <span class="c-swatch-dot" style="background-color: #2D5A3F;"
+                                        title="Sage Green"></span>
                                     <span class="c-swatch-dot" style="background-color: #D4B996;" title="Beige"></span>
                                     <span class="c-swatch-dot" style="background-color: #E88B9E;" title="Pink"></span>
                                 </div>
-                                <button type="button" class="btn-card-add-cart" onclick="addToBag('Sage Green Churidar Set')">
+                                <button type="button" class="btn-card-add-cart"
+                                    onclick="addToBag('Sage Green Churidar Set')">
                                     <i class="bi bi-bag"></i> Add to Cart
                                 </button>
                             </div>
@@ -1042,15 +1080,21 @@
                         <article class="collection-product-card">
                             <div class="c-card-img-wrap">
                                 <span class="badge-card-pill badge-bestseller">Best Seller</span>
-                                <button type="button" class="btn-card-wishlist" onclick="toggleWishlist(this, 'Blush Pink Suit')" aria-label="Add to Wishlist">
+                                <button type="button" class="btn-card-wishlist"
+                                    onclick="toggleWishlist(this, 'Blush Pink Suit')" aria-label="Add to Wishlist">
                                     <i class="bi bi-heart"></i>
                                 </button>
-                                <a href="productdetail.html" class="d-block overflow-hidden"><img src="img/card_pink.jpg" alt="Blush Pink Suit" loading="lazy"></a>
+                                <a href="productdetail.html" class="d-block overflow-hidden"><img
+                                        src="img/card_pink.jpg" alt="Blush Pink Suit" loading="lazy"></a>
                             </div>
                             <div class="c-card-body">
-                                <a href="productdetail.html" class="text-decoration-none text-reset"><h4 class="c-card-title">Blush Pink Suit</h4></a>
+                                <a href="productdetail.html" class="text-decoration-none text-reset">
+                                    <h4 class="c-card-title">Blush Pink Suit</h4>
+                                </a>
                                 <div class="c-card-rating">
-                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+                                    <div class="c-stars-wrap"><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
+                                            class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
                                     <span class="c-rating-num">4.8</span>
                                     <span class="c-review-count">(105)</span>
                                 </div>
@@ -1060,7 +1104,8 @@
                                     <span class="c-price-discount">23% OFF</span>
                                 </div>
                                 <div class="c-card-swatches">
-                                    <span class="c-swatch-dot" style="background-color: #E88B9E;" title="Blush Pink"></span>
+                                    <span class="c-swatch-dot" style="background-color: #E88B9E;"
+                                        title="Blush Pink"></span>
                                     <span class="c-swatch-dot" style="background-color: #E5A93B;" title="Yellow"></span>
                                     <span class="c-swatch-dot" style="background-color: #5E2570;" title="Purple"></span>
                                 </div>
@@ -1086,7 +1131,7 @@
     </section>
 
     <!-- ===================== EXACT SARA'S BOUTIQUE FOOTER ===================== -->
-    <footer class="luxury-footer" role="contentinfo">
+    <footer class="luxury-footer reveal" role="contentinfo">
         <div class="container-fluid px-lg-5 px-md-4 px-3">
             <div class="row g-4 justify-content-between">
 
@@ -1219,11 +1264,11 @@
     <!-- ===================== SIZE GUIDE MODAL ===================== -->
     <div class="modal fade" id="sizeGuideModal" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered modal-lg">
-            <div class="modal-content"
-                style="border-radius: 18px; border: 1.5px solid var(--gold); overflow: hidden;">
+            <div class="modal-content" style="border-radius: 18px; border: 1.5px solid var(--gold); overflow: hidden;">
                 <div class="modal-header border-0 pb-0" style="background: var(--dark-purple); color: #FFF;">
                     <div>
-                        <h5 class="modal-title font-serif" style="font-family: var(--heading-font); color: var(--gold-light);">
+                        <h5 class="modal-title font-serif"
+                            style="font-family: var(--heading-font); color: var(--gold-light);">
                             Sara's Boutique Size Guide
                         </h5>
                         <p class="small text-white-50 m-0">Standard Royal Sizing Chart &amp; Fit Guide</p>
@@ -1292,9 +1337,12 @@
                     <div class="mt-4 p-3 rounded-3" style="background: #FAF6F0; border-left: 4px solid var(--gold);">
                         <h6 class="fw-bold mb-1" style="color: var(--dark-purple);">How to Measure Accurately:</h6>
                         <ul class="small text-muted mb-0 ps-3">
-                            <li><strong>Bust:</strong> Measure around the fullest part of your bust while keeping the tape parallel to the floor.</li>
-                            <li><strong>Waist:</strong> Measure around your natural waistline, located just above the belly button.</li>
-                            <li><strong>Hips:</strong> Stand with feet together and measure around the fullest part of your hips.</li>
+                            <li><strong>Bust:</strong> Measure around the fullest part of your bust while keeping the
+                                tape parallel to the floor.</li>
+                            <li><strong>Waist:</strong> Measure around your natural waistline, located just above the
+                                belly button.</li>
+                            <li><strong>Hips:</strong> Stand with feet together and measure around the fullest part of
+                                your hips.</li>
                         </ul>
                     </div>
                 </div>
@@ -1314,11 +1362,13 @@
                 </div>
 
                 <div class="d-flex justify-content-between align-items-center px-3 pt-2">
-                    <button type="button" class="btn btn-sm btn-outline-warning rounded-pill" onclick="prevProductImage(event)">
+                    <button type="button" class="btn btn-sm btn-outline-warning rounded-pill"
+                        onclick="prevProductImage(event)">
                         <i class="bi bi-chevron-left"></i> Previous
                     </button>
                     <span class="text-white-50 small" id="lightboxCounter">Image 1 of 5</span>
-                    <button type="button" class="btn btn-sm btn-outline-warning rounded-pill" onclick="nextProductImage(event)">
+                    <button type="button" class="btn btn-sm btn-outline-warning rounded-pill"
+                        onclick="nextProductImage(event)">
                         Next <i class="bi bi-chevron-right"></i>
                     </button>
                 </div>
@@ -1578,7 +1628,7 @@
                     title: "Royal Pink Churidar Suit — Sara's Boutique",
                     text: "Discover this handcrafted luxury silk churidar set at Sara's Boutique.",
                     url: window.location.href
-                }).catch(() => {});
+                }).catch(() => { });
             } else {
                 navigator.clipboard.writeText(window.location.href);
                 showToast('Product link copied to your clipboard!');
@@ -1656,6 +1706,9 @@
             }
         });
     </script>
+
+    <!-- 2026 Scroll Animation Controller -->
+    <script src="js/scroll-animation.js"></script>
 </body>
 
 </html>

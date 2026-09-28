@@ -26,7 +26,6 @@
             background-color: #FFFFFF;
             color: var(--text-dark);
             font-family: var(--body-font);
-            overflow-x: hidden;
         }
 
         /* ── PRODUCT HERO / BREADCRUMB BANNER ── */

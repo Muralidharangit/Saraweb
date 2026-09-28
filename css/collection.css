@@ -37,7 +37,17 @@
             text-transform: uppercase;
             color: #e5b869;
             margin-bottom: 0.75rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .collection-eyebrow::after {
+            content: '';
             display: inline-block;
+            width: 32px;
+            height: 1.5px;
+            background: #e5b869;
         }
 
         .collection-main-title {
@@ -96,29 +106,52 @@
 
         .collection-breadcrumbs {
             font-family: var(--sans-font);
-            font-size: 0.82rem;
-            color: rgba(245, 235, 252, 0.8);
-            display: flex;
+            font-size: 0.76rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: rgba(245, 235, 252, 0.82);
+            display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
+            background: rgba(20, 0, 30, 0.65);
+            border: 1px solid rgba(229, 184, 105, 0.35);
+            padding: 6px 18px;
+            border-radius: 30px;
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
             margin: 0;
-            padding: 0;
             list-style: none;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+        }
+
+        .collection-breadcrumbs li {
+            display: inline-flex;
+            align-items: center;
         }
 
         .collection-breadcrumbs a {
             color: rgba(245, 235, 252, 0.85);
             text-decoration: none;
-            transition: color 0.2s ease;
+            transition: color 0.25s ease, text-shadow 0.25s ease;
         }
 
         .collection-breadcrumbs a:hover {
-            color: var(--gold);
+            color: #ffd87a;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.5);
+        }
+
+        .collection-breadcrumbs .crumb-sep {
+            color: #e5b869;
+            font-size: 0.72rem;
+            opacity: 0.85;
+            margin: 0 2px;
         }
 
         .collection-breadcrumbs .active {
-            color: var(--gold);
-            font-weight: 600;
+            color: #ffd87a;
+            font-weight: 700;
+            text-shadow: 0 0 8px rgba(212, 175, 55, 0.4);
         }
 
         .collection-hero-callout {
@@ -146,6 +179,17 @@
             filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.5));
             display: block;
             margin-bottom: 2px;
+        }
+
+        /* ── Main Collection Area & Stability ── */
+        #mainCollectionArea {
+            overflow: hidden;
+            overflow-x: clip;
+            min-height: 800px;
+        }
+
+        #productsGridContainer {
+            min-height: 600px;
         }
 
         /* ── Category Filter Pills Row ── */
@@ -718,6 +762,7 @@
             justify-content: center;
             gap: 6px;
             cursor: pointer;
+            text-decoration: none;
             transition: all 0.25s ease;
         }
 
@@ -725,6 +770,7 @@
             background: linear-gradient(135deg, #e5c378 0%, #d4af37 100%);
             color: #170024;
             border-color: #d4af37;
+            text-decoration: none;
             box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
         }
 

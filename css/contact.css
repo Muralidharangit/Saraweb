@@ -25,7 +25,6 @@
             background-color: var(--bg-canvas);
             color: var(--text-dark);
             font-family: var(--body-font);
-            overflow-x: hidden;
         }
 
         /* ── LUXURY HEADER ACTIVE STATE ── */
