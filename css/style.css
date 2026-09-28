@@ -4169,3 +4169,15 @@ img, svg, video, canvas, audio, iframe, embed, object {
     object-fit: cover;
     object-position: 85% center;
 }
+
+span.collection-script-subtitle.hero-load-item.delay-3 {
+    font-style: italic;
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    /* color: var(--gold); */
+    display: inline-block;
+    background: linear-gradient(90deg, #9B6B16 0%, #D99B2B 18%, #FFE9A0 38%, #F4C95D 50%, #FFF1B2 62%, #D89A28 80%, #9A6915 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: #42424200;
+    background-clip: text;
+}
